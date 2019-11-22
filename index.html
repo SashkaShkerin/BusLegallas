@@ -1,0 +1,2098 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BUS LEGALLAS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style_media.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="js/jquery-3.3.0.min.js"></script>
+</head>
+<body>
+
+  <!-- header section -------------------------------------------------------->
+  <section class="header">
+    <div class="conteiner_header_bar">
+      <div class="content_header_bar fix_width after_clear">
+        <a href="#" class="link_logo vertical_alignment">
+          <div class="conteiner_logo">
+            <svg width="100%" height="100%" viewBox="0 0 93 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.4115 3.23653C11.7584 1.91859 12.9499 1 14.3128 1H87.2067C89.1431 1 90.5722 2.80717 90.126 4.6914L82.547 36.6914C82.2266 38.0445 81.0183 39 79.6278 39H5.89184C3.92482 39 2.49003 37.1388 2.99061 35.2365L11.4115 3.23653Z" fill="#FED500" stroke="#FED500"/>
+              <path d="M11 39H79.8367C81.6907 39 83.3017 37.726 83.729 35.9219L91.1257 4.6914C91.572 2.80716 90.1428 1 88.2065 1H82.672C81.7562 1 80.9574 1.62202 80.733 2.5099L75.6665 22.555C75.5068 23.1867 75.9843 23.8 76.636 23.8H85.917" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M54.4545 16.273L1 16.2729" stroke="#232323" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="64.3638" cy="35" r="8" fill="#E0BC00"/>
+              <circle cx="64.3638" cy="35" r="7" fill="#FED500" stroke="#232323" stroke-width="2"/>
+              <circle cx="24.2729" cy="35" r="8" fill="#E0BC00"/>
+              <circle cx="24.2729" cy="35" r="7" fill="#FED500" stroke="#232323" stroke-width="2"/>
+              <path d="M69.7273 1L22 1" stroke="#232323" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </a>
+        <div class="conteiner_logo_text">
+          <h2>Bus-Legallas</h2>
+          <h5>федеральная&nbsp;автобусная&nbsp;компания</h5>
+        </div>
+        <span id="poligon" class="poligons"></span>
+        <div class="conteiner_language">
+          <div id="conteiner_flag" class="conteiner_flags">
+            <div class="flag conteiner_ru"></div>
+            <div class="flag conteiner_en"></div>
+          </div>
+        </div>
+        <div class="conteiner_header_info vertical_alignment after_clear">
+          <span class="tel_time">Время работы: 24/7</span>
+          <span class="numder_phone"><a href="tel:+73433009683">+7 (343) 300-96-83</a></span>
+        </div>
+      </div>
+    </div>
+    <div class="conteiner_slogan">
+      <div class="content_slogan fix_width">
+        <h1>За&nbsp;2&nbsp;минуты</h1><br>
+        <h1>подберём&nbsp;Вам&nbsp;автобус</h1><br>
+        <h1>или&nbsp;микроавтобус</h1><br>
+        <h1>в&nbsp;Екатеринбурге</h1><br>
+      </div>
+
+      <div class="content_slogan_min fix_width">
+        <h1>За&nbsp;2&nbsp;минуты&nbsp;подберём</h1>
+        <h1>вам&nbsp;микроавтобус</h1>
+        <h1>или&nbsp;автобус</h1>
+      </div>
+    </div>
+    <div class="conteiner_calculation_form after_clear">
+      <form action="#" class=" after_clear" method="POST">
+        <div class="conteiner_block_input">
+          <div class="content_block_input header_conteiner_input ">
+            <label for="input_route_header">Напишите маршрут</label>
+            <input type="text"  id="input_route_header" placeholder="Москва - Рязань" required>
+          </div>
+        </div>
+        <div class="conteiner_block_input ">
+          <div class="content_block_input transport_menu">
+            <label for="input_transport_header">Выберите транспорт</label>
+            <div class="conteiner_dropdown_list_header">
+              <input type="text" id="input_transport_header" class="inputs_transport_header" placeholder="..." required>
+              <ul class="ul_transport_header">
+                <li>Микроавтобус</li>
+                <li>Минивен</li>
+                <li>Автобус</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="conteiner_block_input">
+          <div class="content_block_input header_conteiner_input">
+            <label for="input_phone_header">Телефон</label>
+            <input type="text" name="phone" id="input_phone_header" placeholder="+7 909 453 268" required>
+          </div>
+        </div>
+        <div class="conteiner_block_input">
+          <div class="content_block_input ">
+            <div class="conteiner_checkbox">
+              <input type="checkbox" id="checkbox_header" name="checkbox" value="" required>
+              <label for="checkbox_header">согласен&nbsp;с&nbsp;обработкай&nbsp;данных</label>
+            </div>
+            <div class="conteiner_header_btn">
+              <input type="submit" id="header_btn" class="btn header_btns" value="ПОЛУЧИТЬ РАСЧЁТ">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- slider section -------------------------------------------------------->
+  <section class="conteiner_block_slider">
+    <div class="content_block_slider fix_width">
+      <h2 class="titile_block">Автобусы по назначению</h2>
+      <div class="conteiner_slider_2">
+        <div class="slider_btn slider_left_btn"></div>
+        <div class="slider_btn slider_right_btn"></div>
+        <div class="conteiner_slider_1 after_clear">
+          <div class="content_slider after_clear">
+            <div class="slide_map">
+              <div class="header_img_slide">
+                <img src="pic/slides/atobus_dli_turov.png" alt="">
+              </div>
+              <div class="content_clide">
+                <h4>Автобус&nbsp;для&nbsp;детей</h4>
+                <p>Перевозка детей в автобусе по всем нормам и правилам, включая все лицензии и разрешения! (обеспечиваем согласование и документацию с ГИБДД) </p>
+                <div class="btn_slide_map active_modal">заказать автобус</div>
+              </div>
+            </div>
+            <div class="slide_map">
+              <div class="header_img_slide">
+                <img src="pic/slides/atobus_dli_turov(1).png" alt="">
+              </div>
+              <div class="content_clide">
+                <h4>Автобус&nbsp;на&nbsp;свадьбу</h4>
+                <p>Аренда белоснежного современного автобуса на свадьбу хорошо сочетается в кортеже с микроавтобусом на свадьбу молодоженов и новобрачных.</p>
+                <div class="btn_slide_map active_modal">заказать автобус</div>
+              </div>
+            </div>
+            <div class="slide_map">
+              <div class="header_img_slide">
+                <img src="pic/slides/atobus_dli_turov(1).png" alt="">
+              </div>
+              <div class="content_clide">
+                <h4>Автобус&nbsp;на&nbsp;свадьбу</h4>
+                <p>Аренда белоснежного современного автобуса на свадьбу хорошо сочетается в кортеже с микроавтобусом на свадьбу молодоженов и новобрачных.</p>
+                <div class="btn_slide_map active_modal">заказать автобус</div>
+              </div>
+            </div>
+            <div class="slide_map">
+              <div class="header_img_slide">
+                <img src="pic/slides/atobus_dli_turov(1).png" alt="">
+              </div>
+              <div class="content_clide">
+                <h4>Автобус&nbsp;на&nbsp;свадьбу</h4>
+                <p>Аренда белоснежного современного автобуса на свадьбу хорошо сочетается в кортеже с микроавтобусом на свадьбу молодоженов и новобрачных.</p>
+                <div class="btn_slide_map active_modal">заказать автобус</div>
+              </div>
+            </div>
+            <div class="slide_map">
+              <div class="header_img_slide">
+                <img src="pic/slides/atobus_dli_turov(1).png" alt="">
+              </div>
+              <div class="content_clide">
+                <h4>Автобус&nbsp;на&nbsp;свадьбу</h4>
+                <p>Аренда белоснежного современного автобуса на свадьбу хорошо сочетается в кортеже с микроавтобусом на свадьбу молодоженов и новобрачных.</p>
+                <div class="btn_slide_map active_modal">заказать автобус</div>
+              </div>
+            </div>
+            <div class="slide_map">
+              <div class="header_img_slide">
+                <img src="pic/slides/atobus_dli_turov(1).png" alt="">
+              </div>
+              <div class="content_clide">
+                <h4>Автобус&nbsp;на&nbsp;свадьбу</h4>
+                <p>Аренда белоснежного современного автобуса на свадьбу хорошо сочетается в кортеже с микроавтобусом на свадьбу молодоженов и новобрачных.</p>
+                <div class="btn_slide_map active_modal">заказать автобус</div>
+              </div>
+            </div>
+            <div class="slide_map">
+              <div class="header_img_slide">
+                <img src="pic/slides/atobus_dli_turov.png" alt="">
+              </div>
+              <div class="content_clide">
+                <h4>Автобус&nbsp;для&nbsp;детей</h4>
+                <p>Перевозка детей в автобусе по всем нормам и правилам, включая все лицензии и разрешения! (обеспечиваем согласование и документацию с ГИБДД) </p>
+                <div class="btn_slide_map active_modal">заказать автобус</div>
+              </div>
+            </div>
+            <div class="slide_map">
+              <div class="header_img_slide">
+                <img src="pic/slides/atobus_dli_turov(1).png" alt="">
+              </div>
+              <div class="content_clide">
+                <h4>Автобус&nbsp;на&nbsp;свадьбу</h4>
+                <p>Аренда белоснежного современного автобуса на свадьбу хорошо сочетается в кортеже с микроавтобусом на свадьбу молодоженов и новобрачных.</p>
+                <div class="btn_slide_map active_modal">заказать автобус</div>
+              </div>
+            </div>
+            <div class="slide_map">
+              <div class="header_img_slide">
+                <img src="pic/slides/atobus_dli_turov(2).png" alt="">
+              </div>
+              <div class="content_clide">
+                <h4>Автобус&nbsp;для&nbsp;экскурсий</h4>
+                <p>Любые экскурсии на автобусе повышенной комфортности по России. Более 750'в транспорта в 32 городах России и СНГ готовы выехать в рейс уже сейчас.</p>
+                <div class="btn_slide_map active_modal">заказать автобус</div>
+              </div>
+            </div>
+            <div class="slide_map">
+              <div class="header_img_slide">
+                <img src="pic/slides/atobus_dli_turov(3).png" alt="">
+              </div>
+              <div class="content_clide">
+                <h4>Автобус&nbsp;для&nbsp;туров</h4>
+                <p>Любой Ваш автобусный тур пройдет в комфорте и безопасности на современных автобусах компании, по России или в путешествие по ЕВРОПЕ.</p>
+                <div class="btn_slide_map active_modal">заказать автобус</div>
+              </div>
+            </div>
+            <div class="slide_map">
+              <div class="header_img_slide">
+                <img src="pic/slides/atobus_dli_turov.png" alt="">
+              </div>
+              <div class="content_clide">
+                <h4>Автобус&nbsp;для&nbsp;детей</h4>
+                <p>Перевозка детей в автобусе по всем нормам и правилам, включая все лицензии и разрешения! (обеспечиваем согласование и документацию с ГИБДД) </p>
+                <div class="btn_slide_map active_modal">заказать автобус</div>
+              </div>
+            </div>
+            <div class="slide_map">
+              <div class="header_img_slide">
+                <img src="pic/slides/atobus_dli_turov(1).png" alt="">
+              </div>
+              <div class="content_clide">
+                <h4>Автобус&nbsp;на&nbsp;свадьбу</h4>
+                <p>Аренда белоснежного современного автобуса на свадьбу хорошо сочетается в кортеже с микроавтобусом на свадьбу молодоженов и новобрачных.</p>
+                <div class="btn_slide_map active_modal">заказать автобус</div>
+              </div>
+            </div>
+            <div class="slide_map">
+              <div class="header_img_slide">
+                <img src="pic/slides/atobus_dli_turov(2).png" alt="">
+              </div>
+              <div class="content_clide">
+                <h4>Автобус&nbsp;для&nbsp;экскурсий</h4>
+                <p>Любые экскурсии на автобусе повышенной комфортности по России. Более 750'в транспорта в 32 городах России и СНГ готовы выехать в рейс уже сейчас.</p>
+                <div class="btn_slide_map active_modal">заказать автобус</div>
+              </div>
+            </div>
+            <div class="slide_map">
+              <div class="header_img_slide">
+                <img src="pic/slides/atobus_dli_turov(3).png" alt="">
+              </div>
+              <div class="content_clide">
+                <h4>Автобус&nbsp;для&nbsp;туров</h4>
+                <p>Любой Ваш автобусный тур пройдет в комфорте и безопасности на современных автобусах компании, по России или в путешествие по ЕВРОПЕ.</p>
+                <div class="btn_slide_map active_modal">заказать автобус</div>
+              </div>
+            </div>
+            <div class="slide_map">
+              <div class="header_img_slide">
+                <img src="pic/slides/atobus_dli_turov.png" alt="">
+              </div>
+              <div class="content_clide">
+                <h4>Автобус&nbsp;для&nbsp;детей</h4>
+                <p>Перевозка детей в автобусе по всем нормам и правилам, включая все лицензии и разрешения! (обеспечиваем согласование и документацию с ГИБДД) </p>
+                <div class="btn_slide_map active_modal">заказать автобус</div>
+              </div>
+            </div>
+            <div class="slide_map">
+              <div class="header_img_slide">
+                <img src="pic/slides/atobus_dli_turov(1).png" alt="">
+              </div>
+              <div class="content_clide">
+                <h4>Автобус&nbsp;на&nbsp;свадьбу</h4>
+                <p>Аренда белоснежного современного автобуса на свадьбу хорошо сочетается в кортеже с микроавтобусом на свадьбу молодоженов и новобрачных.</p>
+                <div class="btn_slide_map active_modal">заказать автобус</div>
+              </div>
+            </div>
+            <div class="slide_map">
+              <div class="header_img_slide">
+                <img src="pic/slides/atobus_dli_turov(2).png" alt="">
+              </div>
+              <div class="content_clide">
+                <h4>Автобус&nbsp;для&nbsp;экскурсий</h4>
+                <p>Любые экскурсии на автобусе повышенной комфортности по России. Более 750'в транспорта в 32 городах России и СНГ готовы выехать в рейс уже сейчас.</p>
+                <div class="btn_slide_map active_modal">заказать автобус</div>
+              </div>
+            </div>
+            <div class="slide_map">
+              <div class="header_img_slide">
+                <img src="pic/slides/atobus_dli_turov(3).png" alt="">
+              </div>
+              <div class="content_clide">
+                <h4>Автобус&nbsp;для&nbsp;туров</h4>
+                <p>Любой Ваш автобусный тур пройдет в комфорте и безопасности на современных автобусах компании, по России или в путешествие по ЕВРОПЕ.</p>
+                <div class="btn_slide_map active_modal">заказать автобус</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="conteiner_marker">
+        <div class="conteiner_marker_block after_clear">
+          <div id="marker_block_1" class="marker_block active_marker_block"></div>
+          <div id="marker_block_2" class="marker_block"></div>
+          <div id="marker_block_3" class="marker_block"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- transport section -------------------------------------------------------->
+  <section class="section_transport">
+    <div class="conteiner_transport fix_width">
+      <h2 class="header_conteiner_transport">Выберите транспорт</h2>
+      <div class="conteiner_sorting_1">
+        <div class="conteiner_sorting">
+          <div class="content_sorting after_clear">
+            <h4>Отсортируйте автобусы:</h4>
+            <div class="conteiner_trans_list">
+              <div class="conteiner_dropdown_list1">
+                <div class="conteiner_dropdown_list  input_transport_sort position_drl">
+                  <input type="text" id="input_transport_sort" class="input_transport_sort" placeholder="Эконом" required>
+                  <ul class="ul_transport ul_sort">
+                    <li id="Economy">Эконом</li>
+                    <li id="Luxury">Люкс</li>
+                  </ul>
+                </div>
+              </div>
+              <h5 id="age_transport">Автобусы&nbsp;от&nbsp;2006&nbsp;до&nbsp;2015&nbsp;года</h5>
+            </div>
+            <div class="conteiner_quantity_place after_clear">
+              <span>Кол-во мест<br><i>(цифрой)</i></span>
+              <input type="text" id="number_places" class="numbers_places validInput" placeholder="...">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="conteiner_all_econom_auto">
+        <div class="conteiner_block_auto">
+          <h2>Минивены</h2>
+          <div class="conteiner_cards_auto">
+            <div class="content_cards_auto after_clear">
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minivans/3.jpg" alt="" data-img="pic/econom_auto/minivans/2.jpg">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">1</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minivans/3.jpg" alt="" data-img="pic/econom_auto/minivans/2.jpg">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minivans/3.jpg" alt="" data-img="pic/econom_auto/minivans/2.jpg">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minivans/3.jpg" alt="" data-img="pic/econom_auto/minivans/2.jpg">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minivans/2.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">6</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minivans/1.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">7</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minivans/3.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minivans/2.jpg"  alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">6</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minivans/1.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">7</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minivans/3.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minivans/2.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">6</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minivans/1.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">7</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="conteiner_non_car_massege">
+            <div class="nonCarMassege">Нет машин в наличие</div>
+          </div>
+          <div class="conteiner_btn_more_posts">
+            <div class="btn_more_posts"><span class="txt_more_posts">больше вариантов</span></div>
+          </div>
+        </div>
+
+        <div class="conteiner_block_auto">
+          <h2>Микроавтобусы</h2>
+          <div class="conteiner_cards_auto">
+            <div class="content_cards_auto after_clear">
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minibuses/1.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minibuses/2.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">6</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minibuses/3.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">7</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minibuses/1.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minibuses/2.jpg" alt=""  data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">6</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minibuses/3.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">7</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minibuses/1.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minibuses/2.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">6</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/minibuses/3.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">7</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="conteiner_non_car_massege">
+            <div class="nonCarMassege">Нет машин в наличие</div>
+          </div>
+          <div class="conteiner_btn_more_posts">
+            <div class="btn_more_posts"><span class="txt_more_posts">больше вариантов</span></div>
+          </div>
+        </div>
+
+        <div class="conteiner_block_auto">
+          <h2>Автобусы</h2>
+          <div class="conteiner_cards_auto">
+            <div class="content_cards_auto after_clear">
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/buses/3.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/buses/2.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">6</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/buses/1.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">7</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/buses/3.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/buses/2.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">6</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/buses/1.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">7</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/buses/3.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/buses/2.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">6</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/econom_auto/buses/1.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">7</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="conteiner_non_car_massege">
+            <div class="nonCarMassege">Нет машин в наличие</div>
+          </div>
+          <div class="conteiner_btn_more_posts">
+            <div class="btn_more_posts"><span class="txt_more_posts">больше вариантов</span></div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="conteiner_all_lux_auto">
+        <div class="conteiner_block_auto">
+          <h2>Минивены</h2>
+          <div class="conteiner_cards_auto">
+            <div class="content_cards_auto after_clear">
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/minivans/3.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/minivans/2.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">6</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/minivans/1.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">7</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/minivans/3.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/minivans/2.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">6</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/minivans/1.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">7</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/minivans/3.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/minivans/2.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">6</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/minivans/1.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">7</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="conteiner_non_car_massege">
+            <div class="nonCarMassege">Нет машин в наличие</div>
+          </div>
+          <div class="conteiner_btn_more_posts">
+            <div class="btn_more_posts"><span class="txt_more_posts">больше вариантов</span></div>
+          </div>
+        </div>
+
+        <div class="conteiner_block_auto">
+          <h2>Микроавтобусы</h2>
+          <div class="conteiner_cards_auto">
+            <div class="content_cards_auto after_clear">
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/minibuses/1.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/minibuses/2.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">6</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/minibuses/3.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">7</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/minibuses/1.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/minibuses/2.jpg" alt="" data-img="" >
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">6</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/minibuses/3.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">7</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/minibuses/1.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/minibuses/2.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">6</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/minibuses/3.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">7</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="conteiner_non_car_massege">
+            <div class="nonCarMassege">Нет машин в наличие</div>
+          </div>
+          <div class="conteiner_btn_more_posts">
+            <div class="btn_more_posts"><span class="txt_more_posts">больше вариантов</span></div>
+          </div>
+        </div>
+
+        <div class="conteiner_block_auto">
+          <h2>Автобусы</h2>
+          <div class="conteiner_cards_auto">
+            <div class="content_cards_auto after_clear">
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/buses/3.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/buses/2.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">6</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/buses/1.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">7</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/buses/3.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/buses/2.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">6</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/buses/1.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">7</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/buses/3.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">5</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/buses/2.jpg" alt="" data-img="" >
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">6</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+
+              <div class="conteiner_card">
+                <div class="conteiner_img_card">
+                  <img src="pic/lux_auto/buses/1.jpg" alt="" data-img="">
+                  <div class="conteiner_markers_foto after_clear">
+                    <div class="marker bg_mark"></div>
+                    <div class="marker"></div>
+                  </div>
+                </div>
+                <div class="conteiner_name">
+                  <h4>Toyota Alphard</h4>
+                  <p><i class="places_in_car">7</i> мест</p>
+                </div>
+                <div class="conteiner_details_auto">
+                  <P class="inform_auto">Комфортный минивэн с водителем для поездок на каждый день</P>
+                  <h5>Аренда минивэна от 3 часов по городу</h5>
+                  <div class="conteiner_price after_clear">
+                    <p>от <i>650</i> р/час</p>
+                    <div class="vertical_line"></div>
+                    <p>от <i>25</i> р/км</p>
+                  </div>
+                  <div class="btn_card_auto active_modal">ЗАКАЗАТЬ АВТОБУС</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="conteiner_non_car_massege">
+            <div class="nonCarMassege">Нет машин в наличие</div>
+          </div>
+          <div class="conteiner_btn_more_posts">
+            <div class="btn_more_posts"><span class="txt_more_posts">больше вариантов</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- modal window calculation section -------------------------------------------------------->
+  <section class="section_modal_calculation">
+    <div class="conteiner_modal_calculation after_clear">
+      <div class="conteiner_left_block ">
+        <div class="close_btn" onclick="disableModal()"></div>
+        <div class="content_left_block">
+          <h2>Экспресс расчет стоимости</h2>
+          <p>Специалист подберёт для вас транспорт за 2 минуты</p>
+          <span>-10%</span>
+          <p>Скидка за экономию времени нашего менеджера на следующую поездку</p>
+        </div>
+      </div>
+      <div class="conteiner_right_block">
+        <div class="close_btn" onclick="disableModal()"></div>
+        <div class="content_right_block after_clear">
+          <form class=" after_clear" method="POST">
+            <div class="conteiner_input_modal">
+              <label for="input_name_modal">Имя</label>
+              <input type="text" id="input_name_modal" placeholder="Александр" required>
+            </div>
+            <div class="conteiner_input_modal">
+              <label for="input_phone_modal">Телефон</label>
+              <input type="text" id="input_phone_modal" placeholder="+7 909 453 268" required>
+            </div>
+            <div class="conteiner_input_modal">
+              <label for="input_route_modal">Напишите маршрут</label>
+              <input type="text" id="input_route_modal" placeholder="Москва - Рязань" required>
+            </div>
+            <div class="conteiner_input_modal">
+              <label for="input_transport_modal">Выберите транспорт</label>
+              <div class="conteiner_dropdown_list conteiner_dropdown_list_modal">
+                <input type="text" id="input_transport_modal"  placeholder="..." required>
+                <ul class="ul_transport">
+                  <li>Микроавтобус</li>
+                  <li>Минивен</li>
+                  <li>Автобус</li>
+                </ul>
+              </div>
+            </div>
+            <div class="conteiner_input_modal">
+              <label for="input_date_modal">Дата и время отправки</label>
+              <input type="text" id="input_date_modal" placeholder="5 июля в 8:00" required>
+            </div>
+            <div class="conteiner_input_modal">
+              <input type="submit" id="modal_btn" class="btn modal_btns" value="ПОЛУЧИТЬ РАСЧЁТ">
+              <input type="checkbox" id="modal_checkbox" name="modal_checkbox" class="modal_checkbox" required>
+              <label for="modal_checkbox" class="modal_label_check">Согласен&nbsp;с&nbsp;обработкай&nbsp;персональных данных</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- company section -------------------------------------------------------->
+  <section class="section_company">
+    <div class="conteiner_company fix_width">
+      <div class="content_company">
+        <h2>Мы возим сотрудников</h2>
+        <div class="conteiner_labels_company after_clear">
+          <div class="conteiner_label_company"><img src="pic/company_logos/corgo(1).png" alt=""></div>
+          <div class="conteiner_label_company"><img src="pic/company_logos/corgo(2).png" alt=""></div>
+          <div class="conteiner_label_company"><img src="pic/company_logos/corgo(3).png" alt=""></div>
+          <div class="conteiner_label_company"><img src="pic/company_logos/corgo(4).png" alt=""></div>
+          <div class="conteiner_label_company"><img src="pic/company_logos/corgo(5).png" alt=""></div>
+          <div class="conteiner_label_company"><img src="pic/company_logos/corgo(6).png" alt=""></div>
+          <div class="conteiner_label_company"><img src="pic/company_logos/corgo(7).png" alt=""></div>
+          <div class="conteiner_label_company"><img src="pic/company_logos/corgo(8).png" alt=""></div>
+          <div class="conteiner_label_company"><img src="pic/company_logos/corgo(9).png" alt=""></div>
+          <div class="conteiner_label_company"><img src="pic/company_logos/corgo(10).png" alt=""></div>
+          <div class="conteiner_label_company"><img src="pic/company_logos/corgo(11).png" alt=""></div>
+          <div class="conteiner_label_company"><img src="pic/company_logos/corgo(12).png" alt=""></div>
+          <div class="conteiner_label_company"><img src="pic/company_logos/corgo(13).png" alt=""></div>
+          <div class="conteiner_label_company"><img src="pic/company_logos/corgo(14).png" alt=""></div>
+          <div class="conteiner_label_company"><img src="pic/company_logos/corgo(15).png" alt=""></div>
+          <div class="conteiner_label_company"><img src="pic/company_logos/corgo(16).png" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- form with reviews section -------------------------------------------------------->
+  <section class="form_with_reviews_section">
+    <div class="conteiner_form_reviews fix_width after_clear">
+      <div class="conteiner_reviews">
+        <h2>Отзывы</h2>
+        <div class="conteiner_slider_reviews">
+          <div class="content_slider_reviews after_clear">
+            <div class="review_card">
+              <p>“Отчетные документы получили быстро. Поставили транспорт вовремя.”</p>
+              <div class="conteiner_soc_inf after_clear">
+                <a href="#"><div class="icon_soc_inf"></div></a>
+                <a href="#"><div class="icon_soc_inf"></div></a>
+              </div>
+              <div class="conteiner_av"></div>
+            </div>
+            <div class="review_card">
+              <p>“Поставили транспорт вовремя. Отчетные документы получили быстро. ”</p>
+              <div class="conteiner_soc_inf after_clear">
+                <a href="#"><div class="icon_soc_inf"></div></a>
+                <a href="#"><div class="icon_soc_inf"></div></a>
+              </div>
+              <div class="conteiner_av"></div>
+            </div>
+            <div class="review_card">
+              <p>“Отчетные документы получили быстро. Поставили транспорт вовремя.”</p>
+              <div class="conteiner_soc_inf after_clear">
+                <a href="#"><div class="icon_soc_inf"></div></a>
+                <a href="#"><div class="icon_soc_inf"></div></a>
+              </div>
+              <div class="conteiner_av"></div>
+            </div>
+          </div>
+        </div>
+        <div class="btn_slider_reviews left_btn_reveiws"></div>
+        <div class="btn_slider_reviews right_btn_reveiws"></div>
+        <div class="markers_slider_reviews after_clear">
+          <div class="circle_markers_reviews circle_markers_reviews_active" onclick="markersReviewsSlider('0')"></div>
+          <div class="circle_markers_reviews" onclick="markersReviewsSlider('1')"></div>
+          <div class="circle_markers_reviews" onclick="markersReviewsSlider('2')"></div>
+        </div>
+      </div>
+      <div class="conteiner_form">
+        <h2>Экспресс расчёт стоимости</h2>
+        <h4>Специалист подберёт для вас транспорт за 2 минуты</h4>
+        <div class="content_form">
+
+          <form method="POST" class="after_clear">
+            <div class="conteiner_input_form_reviews">
+              <label for="input_name_reviews" class="label_form_reviews">Имя</label>
+              <input type="text" id="input_name_reviews" placeholder="Александр" required>
+            </div>
+            <div class="conteiner_input_form_reviews">
+              <label for="input_phone_reviews" class="label_form_reviews">Телефон</label>
+              <input type="text" id="input_phone_reviews" placeholder="+7 909 453 268" required>
+            </div>
+            <div class="conteiner_input_form_reviews">
+              <label for="input_route_reviews" class="label_form_reviews">Напишите маршрут</label>
+              <input type="text" id="input_route_reviews" placeholder="Москва - Рязань" required>
+            </div>
+            <div class="conteiner_input_form_reviews">
+              <label for="input_transport_modal" class="label_form_reviews">Выберите транспорт</label>
+              <div class="conteiner_input_form_reviews1">
+                <div class="conteiner_dropdown_list dropdown_list_reviews">
+                  <input type="text" id="input_transport_reviews" class=" input_form_reviews" placeholder="..." required>
+                  <ul class="ul_transport">
+                    <li>Микроавтобус</li>
+                    <li>Минивен</li>
+                    <li>Автобус</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="conteiner_input_form_reviews">
+              <label for="input_date_reviews" class="label_form_reviews">Дата и время отправки</label>
+              <input type="text" id="input_date_reviews" placeholder="5 июля в 8:00" required>
+            </div>
+            <div class="conteiner_input_form_reviews">
+              <input type="checkbox" id="reviews_checkbox" name="reviews_checkbox" class="reviews_checkbox" required>
+              <label for="reviews_checkbox" class="reviers_label_check">Согласен&nbsp;с&nbsp;обработкай&nbsp;своих&nbsp;данных</label>
+              <input type="submit" id="reviews_btn" class="btn reviews_btn" value="ПОЛУЧИТЬ РАСЧЁТ">
+              <span>Вам перезвонят в течение 2х минут</span>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- welcome section -------------------------------------------------------->
+  <section class="welcome_section">
+    <div class="conteiner_welcome_block fix_width after_clear">
+      <div class="conteiner_welcom_paragraph">
+        <h2>Добро пожаловать<br> в онлайн компанию проката автобусов</h2>
+        <h3>Наша цель - Помочь быстро найти автобус для дорожного путишествия клента в любой точке России и СНГ</h3>
+      </div>
+      <div class="conteiner_certificates after_clear">
+        <div class="content_certificates">
+          <div class="certificates"><img src="pic/certificate1.jpg" alt=""></div>
+          <div class="certificates"><img src="pic/certificate2.jpg" alt=""></div>
+        </div>
+      </div>
+      <div class="conteiner_experience after_clear">
+        <div class="content_ex ">
+          <img src="img/experience_work/passagiri.svg" alt="">
+          <h4>75 000<br> пассажиров</h4>
+          <span>Благополучно перевезли<br> за 2018</span>
+        </div>
+        <div class="content_ex ">
+          <img src="img/experience_work/goroda.svg" alt="">
+          <h4>В 17 городах<br>России и СНГ</h4>
+          <span>Пользуются нашими<br> услугами</span>
+        </div>
+        <div class="content_ex ">
+          <img src="img/experience_work/Vector(1).svg" alt="">
+          <h4>1 022 успешных<br> рейсов</h4>
+          <span class="max_vers_experience_txt">Выполнила наша компания<br> за прошедший год</span>
+          <span class="min_vers_experience_txt">Выполнил <br> за прошедший год</span>
+
+        </div>
+        <div class="content_ex ">
+          <img src="img/experience_work/Vector(2).svg" alt="">
+          <h4>750 видов<br> транспорта</h4>
+          <span>Насчитывается на 2018 год</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- enterprises section -------------------------------------------------------->
+  <section class="enterprises_map_section">
+    <div class="conteiner_enterprises_map">
+      <div class="content_enterprises_map fix_width">
+        <h2>Наши представительства на карте России</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer section -------------------------------------------------------->
+  <section class="footer_section">
+    <div class="conteiner_footer fix_width after_clear">
+      <div class="conteiner_logo_footer footer_blocks after_clear ">
+        <div class="log_footer">
+          <a href="#" class="link_logo_footer">
+            <div class="logotype">
+              <svg width="93" height="43" viewBox="0 0 93 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.4115 3.23653C11.7584 1.91859 12.9499 1 14.3128 1H87.2067C89.1431 1 90.5722 2.80717 90.126 4.6914L82.547 36.6914C82.2266 38.0445 81.0183 39 79.6278 39H5.89184C3.92482 39 2.49003 37.1388 2.99061 35.2365L11.4115 3.23653Z" fill="#FED500" stroke="#FED500"/>
+                <path d="M11 39H79.8367C81.6907 39 83.3017 37.726 83.729 35.9219L91.1257 4.6914C91.572 2.80716 90.1428 1 88.2065 1H82.672C81.7562 1 80.9574 1.62202 80.733 2.5099L75.6665 22.555C75.5068 23.1867 75.9843 23.8 76.636 23.8H85.917" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M54.4545 16.273L1 16.2729" stroke="#232323" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="64.3638" cy="35" r="8" fill="#E0BC00"/>
+                <circle cx="64.3638" cy="35" r="7" fill="#FED500" stroke="#232323" stroke-width="2"/>
+                <circle cx="24.2729" cy="35" r="8" fill="#E0BC00"/>
+                <circle cx="24.2729" cy="35" r="7" fill="#FED500" stroke="#232323" stroke-width="2"/>
+                <path d="M69.7273 1L22 1" stroke="#232323" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </a>
+          <div class="conteiner_logo_text_footer">
+            <h4>Bus-Legallas</h4>
+            <span>федеральная&nbsp;автобусная&nbsp;компания</span>
+          </div>
+        </div>
+        <h5>&#169; 2019 Федеральная автобусная компания - Bus Legallas</h5>
+      </div>
+      <div class="conteiner_directions_footer footer_blocks after_clear">
+        <h4 class="header_blocks_footer">Направления</h4>
+        <ul class="after_clear">
+          <li>Автобус для детей</li>
+          <li>Автобус на свадьбу</li>
+          <li>Автобус для экскурсии</li>
+          <li>Автобус для туров</li>
+          <li>Доставка сотрудников</li>
+          <li>Перевозка артистов</li>
+          <li>Городские перевозки</li>
+          <li>Перевозки спортсменов</li>
+          <li>Трансфер в аэропорт</li>
+          <li>-</li>
+        </ul>
+      </div>
+      <div class="conteiner_information_foooter footer_blocks after_clear">
+        <h4 class="header_blocks_footer">Информация</h4>
+        <ul class="after_clear">
+          <li><a href="#">Как заказать?</a></li>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Отзывы</a></li>
+          <li><a href="#">Политика конфеденциальности</a></li>
+        </ul>
+      </div>
+      <div class="conteiner_contacts_foooter footer_blocks after_clear">
+        <h4 class="header_blocks_footer">Контакты</h4>
+        <ul class="after_clear">
+          <li><img src="img/icon/phone.svg" alt=""><a href="tel:+73433009683">+7 (343) 300-96-83</a><br><a href="tel:+74994906512">+7 (499) 490-65-12</a></li>
+          <li><img src="img/icon/email.svg" alt="">sale@Bus-Legallas.com</li>
+          <li><img src="img/icon/geo.svg" alt="">620137, г. Екатеринбург,<br> ул.Блюхера, д. 50, оф. 485</li>
+        </ul>
+        <div class="conteiner_soz_priv after_clear">
+        <div class="conteiner_icon_footer"><a href="#"><img src="img/icon/vk.svg" alt=""></a></div>
+        <div class="conteiner_icon_footer"><a href="#"><img src="img/icon/fb_messege.svg" alt=""></a></div>
+        <div class="conteiner_icon_footer"><a href="#"><img src="img/icon/telegram.svg" alt=""></a></div>
+        <div class="conteiner_icon_footer"><a href="#"><img src="img/icon/whatsapp.svg" alt=""></a></div>
+        </div>
+        <div class="conteiner_kinvasoft_foooter after_clear">
+          <img src="img/icon/by_kinvasoft.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <script src="js/main.js"></script>
+  <script src="js/slider_reviews.js"></script>
+  <script src="js/swype_slider.js"></script>
+  <script>
+  slider(".content_slider", ".conteiner_marker_block", "active_marker_block");
+  slider(".content_slider_reviews", ".markers_slider_reviews", "circle_markers_reviews_active");
+  if($("body").width() <= 500) slider(".content_certificates");
+
+    if('ontouchstart' in document.documentElement){
+      $('.slider_btn').css({'display': 'none'});
+    }
+  </script>
+</body>
+</html>
